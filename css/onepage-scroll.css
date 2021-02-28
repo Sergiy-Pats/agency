@@ -53,8 +53,8 @@ html {
 .onepage-pagination li a:before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 10px;
 
   border: 1px solid rgb(214, 213, 213);
@@ -63,9 +63,9 @@ html {
 }
 
 .onepage-pagination li a.active:before {
-  width: 10px;
-  height: 10px;
-  background: #fff;
+  width: 15px;
+  height: 15px;
+  background-color: #1abc9c;
   border: 1px solid rgb(214, 213, 213);
 }
 
