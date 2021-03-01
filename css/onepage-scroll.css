@@ -33,7 +33,7 @@ html {
 
 .onepage-pagination {
   position: absolute;
-  left: 10px;
+  left: 15%;
   top: 50%;
   z-index: 5;
   list-style: none;
