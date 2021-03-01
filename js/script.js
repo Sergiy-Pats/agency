@@ -15,8 +15,8 @@ jQuery('document').ready(function () {
 	});
 	function wdth() {
 		if (window.innerWidth <= 768) {
-			$('#main, body, html').css({ 'overflow': 'auto' })
-			$('.burger, .menu, .menu-bg').css({
+			$('#main, body, html, .wrapper').css({ 'overflow': 'auto' })
+			$('.burger').css({
 				'position': 'fixed',
 				'top': '40px',
 				'right': '40px',
@@ -26,11 +26,7 @@ jQuery('document').ready(function () {
 				'top': '0px',
 				'right': '0px',
 			})
-			$(' .menu').css({
-				'position': 'fixed',
-				'top': '120px',
-				'right': '40px',
-			})
+
 		}
 
 	}
@@ -75,6 +71,22 @@ jQuery('document').ready(function () {
 					})
 					$('.menu-bg').css({
 						'top': '100vh',
+						'transition': 'all 1s ease'
+					})
+				}
+				if ($('.services').hasClass('active')) {
+					$('.burger').css({
+						'top': '207vh',
+						'transition': 'all 1s ease',
+						'position': 'absoute',
+						'right': '0',
+					})
+					$('.menu').css({
+						'top': '220vh',
+						'transition': 'all 1s ease'
+					})
+					$('.menu-bg').css({
+						'top': '200vh',
 						'transition': 'all 1s ease'
 					})
 				}
