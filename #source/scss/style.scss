@@ -378,8 +378,6 @@ body {
 	background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
 		url(../img/services_bg.jpg) 0 0 / cover no-repeat;
 	padding: 160px 15px 40px 90px;
-	&__block {
-	}
 }
 .services-block {
 	&__top {
@@ -413,10 +411,6 @@ body {
 		display: grid;
 		grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 		gap: 90px;
-	}
-}
-.servicese-block {
-	&__item {
 	}
 }
 .services-item {
