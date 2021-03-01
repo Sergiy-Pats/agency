@@ -53,13 +53,13 @@ jQuery('document').ready(function () {
 
 
 		//console.log(top_story);
-		if (top_story <= 50 && x == 0) {
+		if (top_story <= 250 && x == 0) {
 
 			$('#animate-2').show();
 			$('#animate-2').animate_Text();
 			x++;
 		}
-		if (top_services <= 50 && y == 0) {
+		if (top_services <= 250 && y == 0) {
 
 			$('#animate-3').show();
 			$('#animate-3').animate_Text();
