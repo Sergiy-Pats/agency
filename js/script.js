@@ -1,21 +1,10 @@
 jQuery('document').ready(function () {
-	$('.left-nav li:nth-child(1)').toggleClass('active');
-	$('.left-nav li').click('a', function (event) {
-		event.preventDefault();
-		$('.left-nav li').removeClass('active');
-		$(this).addClass('active');
-	})
-	/*
-	$('.left-nav').on('click', , function (event) {
-		event.preventDefault();
-	})
-	*/
 	$('.burger').click(function (event) {
 		$('.burger, .menu, .menu-bg').toggleClass('active');
 	});
 	function wdth() {
 		if (window.innerWidth <= 768) {
-			$('#main, body, html, .wrapper').css({ 'overflow': 'auto' })
+			$('#main, body, html, .wrapper, window').css({ 'overflow': 'auto' })
 			$('.burger').css({
 				'position': 'fixed',
 				'top': '40px',
@@ -31,8 +20,74 @@ jQuery('document').ready(function () {
 
 	}
 
+	$.fn.animate_Text = function () {
+		var string = this.text();
+		return this.each(function () {
+			var $this = $(this);
+			$this.html(string.replace(/./g, '<span class="new">$&</span>'));
+			$this.find('span.new').each(function (i, el) {
+				setTimeout(function () { $(el).addClass('div_opacity'); }, 180 * i);
+
+			});
+		});
+	};
+
+	let x = 0, y = 0, z = 0;
+	if (window.innerWidth <= 768) {
+		$(".menu").on("click", "a", function (event) {
+
+			$('.burger, .menu, .menu-bg').removeClass('active');
+			event.preventDefault();
+			var id = $(this).attr('href'),
+				menu_top = $(id).offset().top;
+			$('body,html').animate({ scrollTop: menu_top }, 1200);
+		});
+	}
+	$('body').on('scroll', function (e) {
+		//let scrl = $('.hello').offset().top;
+		//scrl = -scrl
+		//console.log(scrl);
+		let top_story = $('.story').offset().top;
+		let top_services = $('.services').offset().top;
+		//let top_portfolio = $('.portfolio').offset().top;
+
+
+		//console.log(top_story);
+		if (top_story <= 50 && x == 0) {
+
+			$('#animate-2').show();
+			$('#animate-2').animate_Text();
+			x++;
+		}
+		if (top_services <= 50 && y == 0) {
+
+			$('#animate-3').show();
+			$('#animate-3').animate_Text();
+			y++;
+		}
+		/*
+		if (top_portfolio <= 50 && z == 0) {
+
+			$('#animate-4').show();
+			$('#animate-4').animate_Text();
+			z++;
+		}
+*/
+
+	})
+
+
+
+
 	wdth();
 	if (window.innerWidth > 768) {
+		$('.menu').on('click', 'a', function (event) {
+			event.preventDefault();
+			let ind = $('a').index(this);
+			//console.log(ind);
+			$('.burger, .menu, .menu-bg').removeClass('active');
+			$('#main').moveTo(ind - 2);
+		})
 		let burg_proc = $('.burger').css('top');
 		$('#main').onepage_scroll({
 			sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
@@ -57,6 +112,9 @@ jQuery('document').ready(function () {
 						'top': '0',
 						'transition': 'all 1s ease'
 					})
+
+					$('#animate').hide();
+
 				}
 				if ($('.story').hasClass('active')) {
 					$('.burger').css({
@@ -73,6 +131,9 @@ jQuery('document').ready(function () {
 						'top': '100vh',
 						'transition': 'all 1s ease'
 					})
+					$('#animate-2').hide();
+
+
 				}
 				if ($('.services').hasClass('active')) {
 					$('.burger').css({
@@ -89,13 +150,23 @@ jQuery('document').ready(function () {
 						'top': '200vh',
 						'transition': 'all 1s ease'
 					})
+					$('#animate-3').hide();
+
 				}
 			},  // This option accepts a callback function. The function will be called before the page moves.
 			afterMove: function (index) {
-
-
-
-
+				if ($('.hello').hasClass('active')) {
+					$('#animate').show();
+					$('#animate').animate_Text();
+				}
+				if ($('.story').hasClass('active')) {
+					$('#animate-2').show();
+					$('#animate-2').animate_Text();
+				}
+				if ($('.services').hasClass('active')) {
+					$('#animate-3').show();
+					$('#animate-3').animate_Text();
+				}
 			},   // This option accepts a callback function. The function will be called after the page moves.
 			loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
 			keyboard: true,                  // You can activate the keyboard controls
@@ -103,13 +174,12 @@ jQuery('document').ready(function () {
 			// you want the responsive fallback to be triggered. For example, set this to 600 and whenever
 			// the browser's width is less than 600, the fallback will kick in.
 			direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-
 		});
-
-		//$(".wrapper").moveTo(1);
-
-
-
 	}
+	$('#animate').show();
+	$('#animate').animate_Text();
+
+
+
 })
 
