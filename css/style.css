@@ -83,7 +83,7 @@ body {
 }
 
 .hello {
-  background: url(../img/1bg.jpg) 0 0/cover no-repeat;
+  background: url(../img/1bg.webp) 0 0/cover no-repeat;
   min-height: 100vh;
   min-width: 100vw;
   display: -webkit-box;
@@ -191,7 +191,7 @@ body {
 
 .menu-bg {
   z-index: -1;
-  background: url(../img/menu_bg.jpg) 0 0/cover no-repeat;
+  background: url(../img/menu_bg.webp) 0 0/cover no-repeat;
   min-height: 100vh;
   min-width: 100vw;
   position: fixed;
@@ -527,8 +527,8 @@ body {
 }
 
 .services {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.82)), to(rgba(0, 0, 0, 0.82))), url(../img/services_bg.jpg) 0 0/cover no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url(../img/services_bg.jpg) 0 0/cover no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.82)), to(rgba(0, 0, 0, 0.82))), url(../img/services_bg.webp) 0 0/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url(../img/services_bg.webp) 0 0/cover no-repeat;
   padding: 7vh 15px 2vh 90px;
 }
 
@@ -596,30 +596,30 @@ body {
   display: block;
   width: 52px;
   height: 52px;
-  background: url(../img/1.png) center center/70% no-repeat;
+  background: url(../img/1.webp) center center/70% no-repeat;
   background-color: #1abc9c;
   position: absolute;
   left: -70px;
 }
 
 .services-item:nth-child(2):before {
-  background: url(../img/2.png) center center/70% no-repeat;
+  background: url(../img/2.webp) center center/70% no-repeat;
 }
 
 .services-item:nth-child(3):before {
-  background: url(../img/3.png) center center/70% no-repeat;
+  background: url(../img/3.webp) center center/70% no-repeat;
 }
 
 .services-item:nth-child(4):before {
-  background: url(../img/4.png) center center/70% no-repeat;
+  background: url(../img/4.webp) center center/70% no-repeat;
 }
 
 .services-item:nth-child(5):before {
-  background: url(../img/5.png) center center/70% no-repeat;
+  background: url(../img/5.webp) center center/70% no-repeat;
 }
 
 .services-item:nth-child(6):before {
-  background: url(../img/6.png) center center/70% no-repeat;
+  background: url(../img/6.webp) center center/70% no-repeat;
 }
 
 .services-item__title {
