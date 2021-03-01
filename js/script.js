@@ -65,6 +65,7 @@ jQuery('document').ready(function () {
 			$('#animate-3').animate_Text();
 			y++;
 		}
+		///23123123
 		/*
 		if (top_portfolio <= 50 && z == 0) {
 
