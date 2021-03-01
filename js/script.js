@@ -7,8 +7,8 @@ jQuery('document').ready(function () {
 			$('#main, body, html, .wrapper, window').css({ 'overflow': 'auto' })
 			$('.burger').css({
 				'position': 'fixed',
-				'top': '40px',
-				'right': '40px',
+				'top': '0px',
+				'right': '0px',
 			})
 			$('  .menu-bg').css({
 				'position': 'fixed',
