@@ -132,6 +132,7 @@ body {
   height: 60px;
   background-color: #202020;
   text-align: center;
+  cursor: pointer;
 }
 
 .burger span, .burger::before, .burger::after {
@@ -383,7 +384,7 @@ body {
 }
 
 .story {
-  padding: 160px 15px 30px;
+  padding: 15vh 15px 30px;
   min-height: 100vh;
 }
 
@@ -425,6 +426,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100%;
 }
 
 .story-block__text-block {
@@ -436,6 +438,7 @@ body {
 
 .story-block__image {
   position: relative;
+  min-height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -446,6 +449,7 @@ body {
 }
 
 .story-block__image img {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -517,14 +521,14 @@ body {
 .services {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.82)), to(rgba(0, 0, 0, 0.82))), url(../img/services_bg.jpg) 0 0/cover no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)), url(../img/services_bg.jpg) 0 0/cover no-repeat;
-  padding: 160px 15px 40px 90px;
+  padding: 7vh 15px 2vh 90px;
 }
 
 .services-block__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 5vh;
 }
 
 .services-block__title {
@@ -557,11 +561,12 @@ body {
   -ms-grid-rows: (1fr)[2];
   -ms-grid-columns: (1fr)[3];
       grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-  gap: 90px;
+  gap: 0 90px;
 }
 
 .services-item {
   position: relative;
+  margin-bottom: 5vh;
 }
 
 .services-item::before {
@@ -615,7 +620,7 @@ body {
   line-height: 45px;
   font-weight: 700;
   color: #ffffff;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
 }
 
 .services-item__text {
