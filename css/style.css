@@ -359,6 +359,14 @@ body {
   color: #e5e5e5;
 }
 
+@media (min-width: 768px) {
+  .button-1:hover,
+  .button-2:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+}
+
 @media (max-width: 600px) {
   .hello__content {
     padding: 80px 75px;
