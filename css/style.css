@@ -764,7 +764,7 @@ body {
 }
 
 .content-portfolio::before {
-  right: 5vh;
+  right: 5vw;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
