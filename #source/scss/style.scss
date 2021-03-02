@@ -359,13 +359,16 @@ body {
 		color: #bababa;
 	}
 }
-
+@media (max-width: 800px) {
+	.story {
+		min-height: auto;
+	}
+}
 @media (max-width: 425.1px) {
 	.story {
 		padding: 30px 15px;
 		display: flex;
 		flex-direction: column;
-		min-height: auto;
 	}
 	.story-block {
 		flex: 1 0 auto;

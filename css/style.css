@@ -488,6 +488,12 @@ body {
   color: #bababa;
 }
 
+@media (max-width: 800px) {
+  .story {
+    min-height: auto;
+  }
+}
+
 @media (max-width: 425.1px) {
   .story {
     padding: 30px 15px;
@@ -498,7 +504,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    min-height: auto;
   }
   .story-block {
     -webkit-box-flex: 1;
