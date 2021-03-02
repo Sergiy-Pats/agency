@@ -32,7 +32,7 @@ jQuery('document').ready(function () {
 		});
 	};
 
-	let x = 0, y = 0, z = 0;
+	let x = 0, y = 0, z = 0, a = 0;
 	if (window.innerWidth <= 768) {
 		$(".menu").on("click", "a", function (event) {
 
@@ -49,7 +49,8 @@ jQuery('document').ready(function () {
 		//console.log(scrl);
 		let top_story = $('.story').offset().top;
 		let top_services = $('.services').offset().top;
-		//let top_portfolio = $('.portfolio').offset().top;
+		let top_portfolio = $('.portfolio').offset().top;
+		let top_contact = $('.contact').offset().top;
 
 
 		//console.log(top_story);
@@ -66,14 +67,20 @@ jQuery('document').ready(function () {
 			y++;
 		}
 		///23123123
-		/*
-		if (top_portfolio <= 50 && z == 0) {
+
+		if (top_portfolio <= 250 && z == 0) {
 
 			$('#animate-4').show();
 			$('#animate-4').animate_Text();
 			z++;
 		}
-*/
+		if (top_contact <= 250 && a == 0) {
+
+			$('#animate-5').show();
+			$('#animate-5').animate_Text();
+			a++;
+		}
+
 
 	})
 
@@ -87,7 +94,7 @@ jQuery('document').ready(function () {
 			let ind = $('a').index(this);
 			//console.log(ind);
 			$('.burger, .menu, .menu-bg').removeClass('active');
-			$('#main').moveTo(ind - 2);
+			$('#main').moveTo(ind - 3);
 		})
 		let burg_proc = $('.burger').css('top');
 		$('#main').onepage_scroll({
@@ -154,6 +161,42 @@ jQuery('document').ready(function () {
 					$('#animate-3').hide();
 
 				}
+				if ($('.portfolio').hasClass('active')) {
+					$('.burger').css({
+						'top': '307vh',
+						'transition': 'all 1s ease',
+						'position': 'absoute',
+						'right': '0',
+					})
+					$('.menu').css({
+						'top': '320vh',
+						'transition': 'all 1s ease'
+					})
+					$('.menu-bg').css({
+						'top': '300vh',
+						'transition': 'all 1s ease'
+					})
+					$('#animate-4').hide();
+
+				}
+				if ($('.contact').hasClass('active')) {
+					$('.burger').css({
+						'top': '407vh',
+						'transition': 'all 1s ease',
+						'position': 'absoute',
+						'right': '0',
+					})
+					$('.menu').css({
+						'top': '420vh',
+						'transition': 'all 1s ease'
+					})
+					$('.menu-bg').css({
+						'top': '400vh',
+						'transition': 'all 1s ease'
+					})
+					$('#animate-5').hide();
+
+				}
 			},  // This option accepts a callback function. The function will be called before the page moves.
 			afterMove: function (index) {
 				if ($('.hello').hasClass('active')) {
@@ -167,6 +210,15 @@ jQuery('document').ready(function () {
 				if ($('.services').hasClass('active')) {
 					$('#animate-3').show();
 					$('#animate-3').animate_Text();
+				}
+
+				if ($('.portfolio').hasClass('active')) {
+					$('#animate-4').show();
+					$('#animate-4').animate_Text();
+				}
+				if ($('.contact').hasClass('active')) {
+					$('#animate-5').show();
+					$('#animate-5').animate_Text();
 				}
 			},   // This option accepts a callback function. The function will be called after the page moves.
 			loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
