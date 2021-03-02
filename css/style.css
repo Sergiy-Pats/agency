@@ -498,6 +498,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    min-height: auto;
   }
   .story-block {
     -webkit-box-flex: 1;
