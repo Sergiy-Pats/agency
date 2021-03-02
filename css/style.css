@@ -662,6 +662,9 @@ body {
   .services-block__title {
     font-size: 36px;
   }
+  .services {
+    padding: 0 10px;
+  }
 }
 
 .portfolio {
