@@ -97,141 +97,141 @@ jQuery('document').ready(function () {
 			$('#main').moveTo(ind - 4);
 		})
 		let burg_proc = $('.burger').css('top');
-		$('#main').onepage_scroll({
-			sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-			easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-			// "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-			animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-			pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-			updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-			beforeMove: function (index) {
-				if ($('.hello').hasClass('active')) {
-					$('.burger').css({
-						'top': '7vh',
-						'transition': 'all 1s ease ',
-						'position': 'absoute',
-						'right': '0',
-					})
-					$('.menu').css({
-						'top': '20vh',
-						'transition': 'all 1s ease'
-					})
-					$('.menu-bg').css({
-						'top': '0',
-						'transition': 'all 1s ease'
-					})
 
-					$('#animate').hide();
-
-				}
-				if ($('.story').hasClass('active')) {
-					$('.burger').css({
-						'top': '107vh',
-						'transition': 'all 1s ease',
-						'position': 'absoute',
-						'right': '0',
-					})
-					$('.menu').css({
-						'top': '120vh',
-						'transition': 'all 1s ease'
-					})
-					$('.menu-bg').css({
-						'top': '100vh',
-						'transition': 'all 1s ease'
-					})
-					$('#animate-2').hide();
-
-
-				}
-				if ($('.services').hasClass('active')) {
-					$('.burger').css({
-						'top': '207vh',
-						'transition': 'all 1s ease',
-						'position': 'absoute',
-						'right': '0',
-					})
-					$('.menu').css({
-						'top': '220vh',
-						'transition': 'all 1s ease'
-					})
-					$('.menu-bg').css({
-						'top': '200vh',
-						'transition': 'all 1s ease'
-					})
-					$('#animate-3').hide();
-
-				}
-				if ($('.portfolio').hasClass('active')) {
-					$('.burger').css({
-						'top': '307vh',
-						'transition': 'all 1s ease',
-						'position': 'absoute',
-						'right': '0',
-					})
-					$('.menu').css({
-						'top': '320vh',
-						'transition': 'all 1s ease'
-					})
-					$('.menu-bg').css({
-						'top': '300vh',
-						'transition': 'all 1s ease'
-					})
-					$('#animate-4').hide();
-
-				}
-				if ($('.contact').hasClass('active')) {
-					$('.burger').css({
-						'top': '407vh',
-						'transition': 'all 1s ease',
-						'position': 'absoute',
-						'right': '0',
-					})
-					$('.menu').css({
-						'top': '420vh',
-						'transition': 'all 1s ease'
-					})
-					$('.menu-bg').css({
-						'top': '400vh',
-						'transition': 'all 1s ease'
-					})
-					$('#animate-5').hide();
-
-				}
-			},  // This option accepts a callback function. The function will be called before the page moves.
-			afterMove: function (index) {
-				if ($('.hello').hasClass('active')) {
-					$('#animate').show();
-					$('#animate').animate_Text();
-				}
-				if ($('.story').hasClass('active')) {
-					$('#animate-2').show();
-					$('#animate-2').animate_Text();
-				}
-				if ($('.services').hasClass('active')) {
-					$('#animate-3').show();
-					$('#animate-3').animate_Text();
-				}
-
-				if ($('.portfolio').hasClass('active')) {
-					$('#animate-4').show();
-					$('#animate-4').animate_Text();
-				}
-				if ($('.contact').hasClass('active')) {
-					$('#animate-5').show();
-					$('#animate-5').animate_Text();
-				}
-			},   // This option accepts a callback function. The function will be called after the page moves.
-			loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-			keyboard: true,                  // You can activate the keyboard controls
-			responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-			// you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-			// the browser's width is less than 600, the fallback will kick in.
-			direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-		});
 	}
+	$('#main').onepage_scroll({
+		sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+		easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+		// "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+		animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+		pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+		updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+		beforeMove: function (index) {
+			if ($('.hello').hasClass('active')) {
+				$('.burger').css({
+					'top': '7vh',
+					'transition': 'all 1s ease ',
+					'position': 'absoute',
+					'right': '0',
+				})
+				$('.menu').css({
+					'top': '20vh',
+					'transition': 'all 1s ease'
+				})
+				$('.menu-bg').css({
+					'top': '0',
+					'transition': 'all 1s ease'
+				})
+
+				$('#animate').hide();
+
+			}
+			if ($('.story').hasClass('active')) {
+				$('.burger').css({
+					'top': '107vh',
+					'transition': 'all 1s ease',
+					'position': 'absoute',
+					'right': '0',
+				})
+				$('.menu').css({
+					'top': '120vh',
+					'transition': 'all 1s ease'
+				})
+				$('.menu-bg').css({
+					'top': '100vh',
+					'transition': 'all 1s ease'
+				})
+				$('#animate-2').hide();
+
+
+			}
+			if ($('.services').hasClass('active')) {
+				$('.burger').css({
+					'top': '207vh',
+					'transition': 'all 1s ease',
+					'position': 'absoute',
+					'right': '0',
+				})
+				$('.menu').css({
+					'top': '220vh',
+					'transition': 'all 1s ease'
+				})
+				$('.menu-bg').css({
+					'top': '200vh',
+					'transition': 'all 1s ease'
+				})
+				$('#animate-3').hide();
+
+			}
+			if ($('.portfolio').hasClass('active')) {
+				$('.burger').css({
+					'top': '307vh',
+					'transition': 'all 1s ease',
+					'position': 'absoute',
+					'right': '0',
+				})
+				$('.menu').css({
+					'top': '320vh',
+					'transition': 'all 1s ease'
+				})
+				$('.menu-bg').css({
+					'top': '300vh',
+					'transition': 'all 1s ease'
+				})
+				$('#animate-4').hide();
+
+			}
+			if ($('.contact').hasClass('active')) {
+				$('.burger').css({
+					'top': '407vh',
+					'transition': 'all 1s ease',
+					'position': 'absoute',
+					'right': '0',
+				})
+				$('.menu').css({
+					'top': '420vh',
+					'transition': 'all 1s ease'
+				})
+				$('.menu-bg').css({
+					'top': '400vh',
+					'transition': 'all 1s ease'
+				})
+				$('#animate-5').hide();
+
+			}
+		},  // This option accepts a callback function. The function will be called before the page moves.
+		afterMove: function (index) {
+			if ($('.hello').hasClass('active')) {
+				$('#animate').show();
+				$('#animate').animate_Text();
+			}
+			if ($('.story').hasClass('active')) {
+				$('#animate-2').show();
+				$('#animate-2').animate_Text();
+			}
+			if ($('.services').hasClass('active')) {
+				$('#animate-3').show();
+				$('#animate-3').animate_Text();
+			}
+
+			if ($('.portfolio').hasClass('active')) {
+				$('#animate-4').show();
+				$('#animate-4').animate_Text();
+			}
+			if ($('.contact').hasClass('active')) {
+				$('#animate-5').show();
+				$('#animate-5').animate_Text();
+			}
+		},   // This option accepts a callback function. The function will be called after the page moves.
+		loop: true,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+		keyboard: true,                  // You can activate the keyboard controls
+		responsiveFallback: 1024,        // You can fallback to normal page scroll by defining the width of the browser in which
+		// you want the responsive fallback to be triggered. For example, set this to 600 and whenever
+		// the browser's width is less than 600, the fallback will kick in.
+		direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
+	});
 	$('#animate').show();
 	$('#animate').animate_Text();
-
 
 
 })
