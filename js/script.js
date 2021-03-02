@@ -3,7 +3,7 @@ jQuery('document').ready(function () {
 		$('.burger, .menu, .menu-bg').toggleClass('active');
 	});
 	function wdth() {
-		if (window.innerWidth <= 768) {
+		if (window.innerWidth <= 1024) {
 			$('#main, body, html, .wrapper, window').css({ 'overflow': 'auto' })
 			$('.burger').css({
 				'position': 'fixed',
@@ -33,7 +33,7 @@ jQuery('document').ready(function () {
 	};
 
 	let x = 0, y = 0, z = 0, a = 0;
-	if (window.innerWidth <= 768) {
+	if (window.innerWidth <= 1024) {
 		$(".menu").on("click", "a", function (event) {
 
 			$('.burger, .menu, .menu-bg').removeClass('active');
@@ -88,7 +88,7 @@ jQuery('document').ready(function () {
 
 
 	wdth();
-	if (window.innerWidth > 768) {
+	if (window.innerWidth > 1024) {
 		$('.menu').on('click', 'a', function (event) {
 			event.preventDefault();
 			let ind = $('a').index(this);
