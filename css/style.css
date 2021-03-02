@@ -1011,7 +1011,7 @@ body {
   .right-block #message {
     width: 100%;
     display: block;
-    min-height: 14vh;
+    min-height: 140px;
   }
 }
 
