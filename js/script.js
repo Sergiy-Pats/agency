@@ -92,7 +92,7 @@ jQuery('document').ready(function () {
 		$('.menu').on('click', 'a', function (event) {
 			event.preventDefault();
 			let ind = $('a').index(this);
-			console.log(ind);
+			//console.log(ind);
 			$('.burger, .menu, .menu-bg').removeClass('active');
 			$('#main').moveTo(ind - 4);
 		})
