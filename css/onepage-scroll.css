@@ -84,7 +84,7 @@ html {
   -moz-transform: none !important;
   transform: none !important;
   -ms-transform: none !important;
-  min-height: 100%;
+  /*min-height: 100%;*/
 }
 
 .disabled-onepage-scroll .onepage-pagination {
